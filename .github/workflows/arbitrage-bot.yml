@@ -1,0 +1,45 @@
+name: Gasless Flash-Loan Arbitrage Bot
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "*/10 * * * *"   # every 10 minutes
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Load environment variables
+      env:
+        RPC_URL: ${{ secrets.RPC_URL }}
+        SEPOLIA_RPC_URL: ${{ secrets.SEPOLIA_RPC_URL }}
+        DEPLOYER_PRIVATE_KEY: ${{ secrets.DEPLOYER_PRIVATE_KEY }}
+        EXECUTOR_PRIVATE_KEY: ${{ secrets.EXECUTOR_PRIVATE_KEY }}
+        RELAYER_PRIVATE_KEY: ${{ secrets.RELAYER_PRIVATE_KEY }}
+        RELAYER_ADDRESS: ${{ secrets.RELAYER_ADDRESS }}
+        BUNDLER_RPC_URL: ${{ secrets.BUNDLER_RPC_URL }}
+        FLASHBOTS_RPC_URL: ${{ secrets.FLASHBOTS_RPC_URL }}
+        ETHERSCAN_API_KEY: ${{ secrets.ETHERSCAN_API_KEY }}
+      run: echo "Environment variables loaded."
+
+    - name: Run arbitrage bot (mainnet continuous mode)
+      env:
+        RPC_URL: ${{ secrets.RPC_URL }}
+        DEPLOYER_PRIVATE_KEY: ${{ secrets.DEPLOYER_PRIVATE_KEY }}
+        EXECUTOR_PRIVATE_KEY: ${{ secrets.EXECUTOR_PRIVATE_KEY }}
+        RELAYER_PRIVATE_KEY: ${{ secrets.RELAYER_PRIVATE_KEY }}
+        BUNDLER_RPC_URL: ${{ secrets.BUNDLER_RPC_URL }}
+        FLASHBOTS_RPC_URL: ${{ secrets.FLASHBOTS_RPC_URL }}
+      run: npm run run:mainnet
