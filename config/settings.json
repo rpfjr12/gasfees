@@ -1,12 +1,15 @@
 {
   "chain": "sepolia",
+
   "rpcUrl": "https://eth-sepolia.public.blastapi.io",
+
   "ownerWallet": "",
   "executorPrivateKey": "",
   "relayerPrivateKey": "",
   "relayerAddress": "",
-  "bundlerRpcUrl": "",
-  "flashbotsRpcUrl": "",
+
+  "bundlerRpcUrl": "https://api.pimlico.io/v1/ethereum/sepolia/bundler",
+  "flashbotsRpcUrl": "https://relay.flashbots.net",
 
   "scanIntervalMs": 10000,
   "minProfitPct": 0.5,
@@ -30,7 +33,9 @@
     "arbitrage": "",
     "flashLoanReceiver": "",
     "paymaster": "",
+
     "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+
     "aavePool": "0x6Ae43d3270ff4312185e538f3b49C9C40f79b9b6"
   },
 
