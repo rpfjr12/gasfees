@@ -1,0 +1,45 @@
+{
+  "name": "gasless-flashloan-arbitrage-bot",
+  "version": "1.0.0",
+  "description": "Gasless flash-loan arbitrage bot on Ethereum — Aave V3 flash loans, ERC-4337 paymaster for zero-gas, Flashbots private mempool submission, full atomic execution",
+  "main": "scripts/runArbitrage.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network mainnet",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "deploy:localhost": "hardhat run scripts/deploy.js --network localhost",
+    "test:sim": "hardhat run scripts/test.js --network hardhat",
+    "test:mainnet": "hardhat run scripts/test.js --network mainnet",
+    "test:sepolia": "hardhat run scripts/test.js --network sepolia",
+    "scan": "node bot/scanner.js",
+    "run:mainnet": "hardhat run scripts/runArbitrage.js --network mainnet",
+    "run:sepolia": "hardhat run scripts/runArbitrage.js --network sepolia",
+    "run:dry": "node scripts/runArbitrage.js --dry-run",
+    "run:once": "node scripts/runArbitrage.js --once",
+    "console": "hardhat console --network mainnet"
+  },
+  "keywords": [
+    "ethereum",
+    "arbitrage",
+    "flash-loan",
+    "aave",
+    "erc-4337",
+    "paymaster",
+    "gasless",
+    "flashbots",
+    "mev",
+    "defi",
+    "uniswap",
+    "sushiswap"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.0"
+  },
+  "dependencies": {
+    "ethers": "^6.13.0",
+    "dotenv": "^16.4.0"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "chain": "sepolia",
+  "rpcUrl": "https://eth-sepolia.public.blastapi.io",
+  "ownerWallet": "",
+  "executorPrivateKey": "",
+  "relayerPrivateKey": "",
+  "relayerAddress": "",
+  "bundlerRpcUrl": "",
+  "flashbotsRpcUrl": "",
+
+  "scanIntervalMs": 10000,
+  "minProfitPct": 0.5,
+  "minProfitThresholdUsd": "5",
+  "minNetProfitUsd": "2",
+  "tradeSizeUsd": "10000",
+
+  "gasEstimateLimit": 3000000,
+  "gasPriceBufferBps": 1100,
+  "defaultGasEstimate": 500000,
+  "paymasterReimbursementBps": 1000,
+
+  "ethPriceUsd": 3000,
+  "tokenPrices": {},
+
+  "relayerMinDepositEth": "0.5",
+  "relayerTopUpAmountEth": "1.0",
+  "relayerMonitorIntervalMs": 60000,
+
+  "contractAddresses": {
+    "arbitrage": "",
+    "flashLoanReceiver": "",
+    "paymaster": "",
+    "entryPoint": "0x0000000071727De22E5E9d8BAf0edAc6f37da032",
+    "aavePool": "0x6Ae43d3270ff4312185e538f3b49C9C40f79b9b6"
+  },
+
+  "dexAddresses": {
+    "uniswapV2Router": "0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D",
+    "uniswapV2Factory": "0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f",
+    "uniswapV3Router": "0xE592427A0AEce92De3Edee1F18E0157C05861564",
+    "uniswapV3Quoter": "0xb27308f9F90D607463bb33eA1BeBb41C27CE5AB6",
+    "sushiswapRouter": "0xd9e1cE17f2641f24aE83637ab66a2cca9C378B9F",
+    "sushiswapFactory": "0xC0AEe478e3658e2610c5F7A4A2E1777cE9e4f2Ac"
+  },
+
+  "tokenPairs": [
+    {
+      "label": "WETH/USDC",
+      "tokenA": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "tokenB": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "decimalsA": 18,
+      "decimalsB": 6
+    },
+    {
+      "label": "WETH/USDT",
+      "tokenA": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "tokenB": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "decimalsA": 18,
+      "decimalsB": 6
+    },
+    {
+      "label": "WETH/DAI",
+      "tokenA": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "tokenB": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+      "decimalsA": 18,
+      "decimalsB": 18
+    },
+    {
+      "label": "USDC/USDT",
+      "tokenA": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      "tokenB": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+      "decimalsA": 6,
+      "decimalsB": 6
+    },
+    {
+      "label": "WBTC/WETH",
+      "tokenA": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+      "tokenB": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "decimalsA": 8,
+      "decimalsB": 18
+    },
+    {
+      "label": "LINK/WETH",
+      "tokenA": "0x514910771AF9Ca656af840dff83E8264EcF986CA",
+      "tokenB": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "decimalsA": 18,
+      "decimalsB": 18
+    }
+  ]
+}

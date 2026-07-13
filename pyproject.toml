@@ -1,0 +1,18 @@
+[project]
+name = "react-app"
+version = "0.1.0"
+description = "React App with FastAPI Backend"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi==0.135.1",
+    "uvicorn==0.41.0",
+    "httpx==0.28.1",
+    "python-multipart==0.0.22",
+    "watchfiles==1.1.1",
+]
+
+[tool.uv]
+exclude-newer = "14 days"
+# workshop-connect is published by us; exempt from the rolling window.
+exclude-newer-package = { workshop-connect = "2027-01-01" }
